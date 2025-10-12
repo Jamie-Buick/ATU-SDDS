@@ -18,6 +18,4 @@ public interface Node<T> { // T can be any data type, its a generic. Gives us fl
 	public boolean hasSibling();
 	public List<Node<T>> siblings();
 	
-	
-	
 }
