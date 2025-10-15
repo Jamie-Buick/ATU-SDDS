@@ -9,10 +9,10 @@ public interface LineItem {
 	public String getItemName();
 	
 	public void setItemQuantity(int qty);
-	public String getItemQuantity();
+	public int getItemQuantity();
 	
 	public void setItemPrice(float price);
-	public String getItemPrice();
+	public float getItemPrice();
 	
 
 }

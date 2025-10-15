@@ -8,6 +8,5 @@ public interface Order {
 	public boolean addItem(LineItem item);
 	public boolean removeItem(LineItem item);
 	public LineItem[] items();
-	
 	public float getTotal();
 }
