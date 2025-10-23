@@ -34,21 +34,36 @@ public class NodeImpl<T> implements Node<T>{
 	}
 
 	public List<Node<T>> children() {
-		return this.children();
+		return new ArrayList<Node<T>>(this.children());
 	}
 
 	
 	public void addChild(Node<T> child) {
-		children.add(child);
+		int index = indexOf(child);
+		if (index == -1) {
+			children.add(child);
+		}
 	}
 
 	public void removeChild(Node<T> child) {
-		children.remove(child);
+		int index = indexOf(child);
+		
+		if (index >= 0) {
+			children.remove(index);
+		}
 	}
 
+	private int indexOf(Node<T> child) {		// O(n) 
+		for (int i = 0; i < children.size(); i++) {
+			if(children.get(i).getData().equals(child.getData())) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
 	public boolean hasChild(Node<T> child) {
-		return children.contains(child);	
-		
+		return indexOf(child) >= 0;
 	}
 
 	public boolean hasSibling() {
