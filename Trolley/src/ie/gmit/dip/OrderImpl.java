@@ -38,6 +38,7 @@ public class OrderImpl implements Order {
 	}
 
 	public LineItem[] items() {
+		Collections.sort(items);
 		LineItem[] temp = new LineItem[items.size()];
 		for (int i = 0; i < items.size(); i++) {
 			temp[i] = items.get(i);

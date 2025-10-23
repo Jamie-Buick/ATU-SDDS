@@ -69,6 +69,33 @@ public class LineItemImpl implements LineItem{
 	public float getItemPrice() {
 		return this.price;
 	}
+
+
+	public int hashCode() {
+		return number.hashCode();
+	}
+
+
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LineItemImpl other = (LineItemImpl) obj;
+		if (number == null) {
+			if (other.number != null)
+				return false;
+		} else if (!number.equals(other.number))
+			return false;
+		return true;
+	}
+
+
+	public int compareTo(LineItem o) {
+		return -this.number.compareTo(o.getItemNumber()); // Delegating
+	}
 	
 	
 	
