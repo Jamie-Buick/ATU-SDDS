@@ -88,3 +88,16 @@ nb-configuration.xml
 ## Miscellaneous
 ##############################
 *.log
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+# Build output
+/bin/
+target/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
