@@ -2,6 +2,8 @@ package ie.atu.sw;
 
 public interface EmployeeDetails {
 	
+	// Represents the Employees details only
+	
 	public void setEmployeeName(String name);
 	public String getEmployeeName();
 	

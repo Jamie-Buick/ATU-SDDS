@@ -1,5 +1,7 @@
 package ie.atu.sw;
 
+
+// do not use getters and setters with interfaces
 public interface CompanyDetails {
 
 	// Represents the Company details only
