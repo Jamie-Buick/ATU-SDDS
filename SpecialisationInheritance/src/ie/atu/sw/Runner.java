@@ -5,11 +5,13 @@ import java.util.*;
 public class Runner {
 
 	public static void main(String[] args) throws Exception {
-		Animal a = new RaceHorse("Sheep", 34);
+		Jumpator a = new RaceHorse("Sheep", 34);
 	
+		//a.jump();
+
 		
-		a.move();
-		a.eat();
+		Jumpator.getHeightAsMetres(34);
+		double val = Jumpator.MIN_HEIGHT;
 		
 		a = new RaceHorse("Arkle", 12);
 		//a = new Kangaroo("Skippy", 4);
@@ -18,7 +20,7 @@ public class Runner {
 		arkle.gallop();
 		
 	
-		List<JumpingAnimal> jumpers = new ArrayList<>();
+		List<Jumpator> jumpers = new ArrayList<>();
 		
 		for(int i = 0; i < 10; i++) {
 			
@@ -36,12 +38,13 @@ public class Runner {
 	
 	
 	
-	public static void visit(Collection<JumpingAnimal> col) throws Exception {
+	public static void visit(Collection<Jumpator> col) throws Exception {
 		
-		for(JumpingAnimal j : col) {
+		for(Jumpator j : col) {
 			//j.jump(); // Behaviour depends on the type of jumping animal => POLYMORHISM!
 			//j.eat(); // This behaviour is polymorphic and depends on the type of animal
-			j.sleep();
+			//j.sleep();
+			j.jump();
 		}
 		
 	}
