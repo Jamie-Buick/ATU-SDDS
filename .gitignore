@@ -90,9 +90,7 @@ nb-configuration.xml
 *.log
 
 # Eclipse project files
-.project
-.classpath
-.settings/
+
 
 # Build output
 /bin/
