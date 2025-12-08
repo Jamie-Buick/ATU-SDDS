@@ -3,6 +3,7 @@ package ie.atu.sw;
 public abstract class Legume {
 
 	private String name;
+	
 
 	public Legume(String name) {
 		this.name = name;
