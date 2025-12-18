@@ -24,7 +24,7 @@ public class RunnableAtomicThreadPool {
 		
 		try(var pool = Executors.newFixedThreadPool(10)){
 			for (int i = 0; i < 500; i++){
-				pool.execute(() -> { 
+				pool.execute(() -> { //An anonymous inner class
 					while (counter < 10000) {
 						counter++; //Update counter...
 						atomic.getAndIncrement(); //Update atomically...
